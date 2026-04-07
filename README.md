@@ -66,9 +66,7 @@ Crawler akan mengakses website target, melakukan rendering (jika diperlukan), da
 * ✅ Crawl multiple URLs (batch)
 * ✅ Support SPA, SSR, PWA
 * ✅ Save hasil ke file HTML
-* ✅ Logging request
 * ✅ Swagger API Documentation
-* ✅ Clean project structure
 
 ---
 
