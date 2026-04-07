@@ -28,10 +28,11 @@ Crawler akan mengakses website target, melakukan rendering (jika diperlukan), da
 * **Playwright** → Browser automation (Chromium)
 * **fs-extra** → File handling
 * **Morgan** → Logging
+* **Swagger (OpenAPI 3.0)** → API Documentation
 
 ---
 
-## 🧠 Supported Website Types
+## Supported Website Types
 
 ### 1. SPA (Single Page Application)
 
@@ -59,13 +60,14 @@ Crawler akan mengakses website target, melakukan rendering (jika diperlukan), da
 
 ---
 
-## 🚀 Features
+## Features
 
 * ✅ Crawl single URL
 * ✅ Crawl multiple URLs (batch)
 * ✅ Support SPA, SSR, PWA
 * ✅ Save hasil ke file HTML
 * ✅ Logging request
+* ✅ Swagger API Documentation
 * ✅ Clean project structure
 
 ---
@@ -84,6 +86,9 @@ crawler-api/
 │   │
 │   ├── routes/
 │   │   └── crawl.routes.js
+│   │
+│   ├── config/
+│   │   └── swagger.js
 │   │
 │   └── app.js
 │
@@ -116,7 +121,7 @@ npx playwright install
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 ```bash
 npm start
@@ -130,9 +135,28 @@ http://localhost:3000
 
 ---
 
-##  API Endpoints
+## API Documentation (Swagger)
 
-###  1. Crawl Single Website
+Project ini menggunakan **Swagger (OpenAPI 3.0)** untuk dokumentasi API secara interaktif.
+
+### 🔗 Swagger UI
+
+```
+http://localhost:3000/api-docs
+```
+
+### Fitur Swagger
+
+* Interactive API testing langsung dari browser
+* Dokumentasi endpoint otomatis dari kode
+* Menampilkan request & response schema
+* Mempermudah debugging dan eksplorasi API
+
+---
+
+## 📡 API Endpoints
+
+### 1. Crawl Single Website
 
 **POST** `/api/crawl`
 
@@ -159,7 +183,7 @@ http://localhost:3000
 
 ---
 
-###  2. Crawl Multiple Websites (Batch)
+### 2. Crawl Multiple Websites (Batch)
 
 **POST** `/api/crawl/batch`
 
